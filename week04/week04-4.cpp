@@ -1,0 +1,17 @@
+///LeetCode 66.
+class Solution {
+public:
+    vector<int> plusOne(vector<int>& digits) {
+        int N = digits.size();//有幾位數
+        int carry =1;//進位的英文教carry
+        for(int i=N-1; i>=0;i--){
+            int now = digits[i]+carry;
+            carry = now / 10;
+            digits[i] = now %10;
+
+        }
+        //離開迴圈時,竟然還有carry要進位
+        if(carry>0) digits.insert(digits.begin(), carry);
+        return digits;
+    }
+};
