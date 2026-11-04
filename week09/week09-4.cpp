@@ -1,0 +1,17 @@
+//week09-4.cpp
+#include <iostream>
+using namespace std;
+//¤£¥Îwhile°j°é
+void f(int n){
+	if(n==0) return;
+	cout << n%10;
+	f(n/10);
+
+}
+int main()
+{
+	int N;
+	cin >> N;
+	f(N);
+	cout << "\n";
+}
